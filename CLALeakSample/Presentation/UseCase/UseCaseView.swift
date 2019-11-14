@@ -43,6 +43,10 @@ final class UseCaseViewController: BaseViewController {
         setup()
         get()
     }
+    
+    deinit {
+        print("\(type(of: self)) was deinit")
+    }
 }
 
 extension UseCaseViewController: UseCaseView {

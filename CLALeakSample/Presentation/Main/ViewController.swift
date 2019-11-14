@@ -34,6 +34,9 @@ extension ViewController {
             case 2:
                 let vc = BuilderImpl().build(.directlyType)
                 present(vc, animated: true, completion: nil)
+            case 3:
+                let vc = BuilderImpl().build(.disposedType)
+                present(vc, animated: true, completion: nil)
             default:
                 break
             }
@@ -48,6 +51,9 @@ extension ViewController {
             case 2:
                 let vc = BuilderImpl().build(.directlyType)
                 navigationController?.pushViewController(vc, animated: true)
+            case 3:
+                let vc = BuilderImpl().build(.disposedType)
+               navigationController?.pushViewController(vc, animated: true)
             default:
                 break
             }

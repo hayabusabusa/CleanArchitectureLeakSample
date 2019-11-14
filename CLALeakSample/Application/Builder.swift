@@ -42,7 +42,11 @@ struct BuilderImpl: Builder {
             return vc
         case .directlyType:
             let vc = DirectlyViewController.newInstance()
-            vc.apiProvider = SingletoneAPIProvider.shared
+            vc.inject(apiProvider: SingletoneAPIProvider.shared)
+            return vc
+        case .disposedType:
+            let vc = DisposeViewController.newInstance()
+            vc.inject(apiProvider: SingletoneAPIProvider.shared)
             return vc
         }
     }
@@ -54,4 +58,5 @@ enum BuildType {
     case structType
     case useCaseType
     case directlyType
+    case disposedType
 }

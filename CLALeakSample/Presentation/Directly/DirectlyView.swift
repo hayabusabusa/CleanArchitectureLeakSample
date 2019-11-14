@@ -29,10 +29,14 @@ final class DirectlyViewController: BaseViewController {
     
     // MARK: Properties
     
-    var apiProvider: APIProvider!
+    private var apiProvider: APIProvider!
     private var dataSource: [DirectlySection] = [DirectlySection]()
     
     // MARK: Lifecycle
+    
+    func inject(apiProvider: APIProvider) {
+        self.apiProvider = apiProvider
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,10 @@ final class DirectlyViewController: BaseViewController {
             print(error)
         })
         .disposed(by: disposeBag)
+    }
+    
+    deinit {
+        print("\(type(of: self)) was deinit")
     }
 }
 

@@ -46,6 +46,8 @@
 		A4851ACC237D161A0004824D /* DirectlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851ACB237D161A0004824D /* DirectlyView.swift */; };
 		A4851ACE237D16960004824D /* DirectlyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4851ACD237D16960004824D /* DirectlyViewController.storyboard */; };
 		A4851AD1237D17250004824D /* DirectlySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AD0237D17250004824D /* DirectlySection.swift */; };
+		A4851AD4237D2BF80004824D /* DisposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AD3237D2BF80004824D /* DisposeView.swift */; };
+		A4851AD6237D2C780004824D /* DisposeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4851AD5237D2C780004824D /* DisposeViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +105,8 @@
 		A4851ACB237D161A0004824D /* DirectlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectlyView.swift; sourceTree = "<group>"; };
 		A4851ACD237D16960004824D /* DirectlyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectlyViewController.storyboard; sourceTree = "<group>"; };
 		A4851AD0237D17250004824D /* DirectlySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectlySection.swift; sourceTree = "<group>"; };
+		A4851AD3237D2BF80004824D /* DisposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeView.swift; sourceTree = "<group>"; };
+		A4851AD5237D2C780004824D /* DisposeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DisposeViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +371,8 @@
 		A4851AD2237D2B320004824D /* Dispose */ = {
 			isa = PBXGroup;
 			children = (
+				A4851AD3237D2BF80004824D /* DisposeView.swift */,
+				A4851AD5237D2C780004824D /* DisposeViewController.storyboard */,
 			);
 			name = Dispose;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 			files = (
 				A4851AC5237D10250004824D /* UseCaseViewController.storyboard in Resources */,
 				A4322A68237CE42E00F1BEA1 /* LaunchScreen.storyboard in Resources */,
+				A4851AD6237D2C780004824D /* DisposeViewController.storyboard in Resources */,
 				A4322A65237CE42E00F1BEA1 /* Assets.xcassets in Resources */,
 				A4851AB9237CF5A10004824D /* PostCell.xib in Resources */,
 				A4851AB3237CF11A0004824D /* StructViewController.storyboard in Resources */,
@@ -481,6 +488,7 @@
 				A4851ABB237CF7E60004824D /* StructSection.swift in Sources */,
 				A4322A91237CEBCB00F1BEA1 /* AssociatedTranslator.swift in Sources */,
 				A4322A60237CE42B00F1BEA1 /* ViewController.swift in Sources */,
+				A4851AD4237D2BF80004824D /* DisposeView.swift in Sources */,
 				A4322A9B237CED3F00F1BEA1 /* Wireframe.swift in Sources */,
 				A4322A89237CEA7900F1BEA1 /* EnumAPIProvider.swift in Sources */,
 				A4322AA1237CEDBD00F1BEA1 /* BaseNavigationController.swift in Sources */,

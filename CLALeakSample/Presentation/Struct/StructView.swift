@@ -59,6 +59,10 @@ final class StructViewController: BaseViewController {
         _ = didAppearInit
     }
     
+    deinit {
+        print("\(type(of: self)) was deinit")
+    }
+    
     // MARK: IBAction
     
     @IBAction func onTapCloseButton(_ sender: UIButton) {
