@@ -11,7 +11,8 @@ import UIKit
 // MARK: - Interface
 
 protocol Wireframe {
-    func dismiss() 
+    func dismiss()
+    func pushSameVC()
 }
 
 // MARK: - Implementation
@@ -32,5 +33,10 @@ struct WireframeImpl: Wireframe {
     
     func dismiss() {
         viewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func pushSameVC() {
+        let vc = BuilderImpl().build(.structType)
+        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

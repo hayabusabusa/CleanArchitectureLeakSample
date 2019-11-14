@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-struct StructAPIProvider {
+struct StructAPIProvider: APIProvider {
     
     // MARK: Properties
     

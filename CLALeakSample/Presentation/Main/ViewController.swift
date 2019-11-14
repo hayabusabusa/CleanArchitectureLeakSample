@@ -31,6 +31,14 @@ extension ViewController {
             default:
                 break
             }
+        case 1:
+            switch indexPath.row {
+            case 0:
+                let vc = BaseNavigationController(rootViewController: BuilderImpl().build(.structType))
+                present(vc, animated: true, completion: nil)
+            default:
+                break
+            }
         default:
             break
         }

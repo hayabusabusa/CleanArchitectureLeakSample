@@ -40,6 +40,32 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="NavigationController push" id="CTe-rZ-mSH">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="0oN-U0-86v">
+                                        <rect key="frame" x="20" y="155" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0oN-U0-86v" id="vih-5X-hQz">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NVC.push + Struct APIProvider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRS-61-m1S">
+                                                    <rect key="frame" x="16" y="8" width="342" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mRS-61-m1S" firstAttribute="top" secondItem="vih-5X-hQz" secondAttribute="top" constant="8" id="1nW-Fc-mvI"/>
+                                                <constraint firstAttribute="trailing" secondItem="mRS-61-m1S" secondAttribute="trailing" constant="16" id="Veh-Bm-lQH"/>
+                                                <constraint firstItem="mRS-61-m1S" firstAttribute="leading" secondItem="vih-5X-hQz" secondAttribute="leading" constant="16" id="a5Y-xe-YKx"/>
+                                                <constraint firstAttribute="bottom" secondItem="mRS-61-m1S" secondAttribute="bottom" constant="8" id="frk-vL-s6s"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="QMe-Cz-pZD" id="LpV-5s-YUC"/>

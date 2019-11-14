@@ -48,38 +48,58 @@
                                             <constraint firstAttribute="height" constant="1" id="ZLS-jr-X3T"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjS-Ak-eTo">
-                                        <rect key="frame" x="24" y="16" width="366" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3nu-o1-iZ1">
+                                        <rect key="frame" x="24" y="17" width="366" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjS-Ak-eTo">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Close">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onTapCloseButton:" destination="Osh-dw-BDS" eventType="touchUpInside" id="WP2-j7-wmr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-s0-p9h">
+                                                <rect key="frame" x="187" y="0.0" width="179" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Push">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onTapPushButton:" destination="Osh-dw-BDS" eventType="touchUpInside" id="GUB-eU-JhK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="PMk-vu-G1r"/>
+                                            <constraint firstAttribute="height" constant="40" id="W1E-Lh-Vxh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Close">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="onTapCloseButton:" destination="Osh-dw-BDS" eventType="touchUpInside" id="WP2-j7-wmr"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="R7f-et-C8m" firstAttribute="top" secondItem="leT-IX-zeG" secondAttribute="top" id="12a-LL-Ojr"/>
                                     <constraint firstItem="pSQ-eK-6nY" firstAttribute="leading" secondItem="leT-IX-zeG" secondAttribute="leading" id="1T0-uz-m3e"/>
+                                    <constraint firstAttribute="trailing" secondItem="3nu-o1-iZ1" secondAttribute="trailing" constant="24" id="AlW-Kf-Rbe"/>
+                                    <constraint firstItem="3nu-o1-iZ1" firstAttribute="top" secondItem="pSQ-eK-6nY" secondAttribute="bottom" constant="16" id="EET-fe-blQ"/>
                                     <constraint firstAttribute="bottom" secondItem="R7f-et-C8m" secondAttribute="bottom" id="Fpw-nk-9i4"/>
-                                    <constraint firstItem="TjS-Ak-eTo" firstAttribute="leading" secondItem="leT-IX-zeG" secondAttribute="leading" constant="24" id="I5h-11-NtR"/>
                                     <constraint firstAttribute="trailing" secondItem="pSQ-eK-6nY" secondAttribute="trailing" id="Sgy-mj-VPL"/>
                                     <constraint firstAttribute="trailing" secondItem="R7f-et-C8m" secondAttribute="trailing" id="UQy-Vq-vRW"/>
                                     <constraint firstItem="pSQ-eK-6nY" firstAttribute="top" secondItem="leT-IX-zeG" secondAttribute="top" id="aIJ-jj-MtP"/>
-                                    <constraint firstAttribute="trailing" secondItem="TjS-Ak-eTo" secondAttribute="trailing" constant="24" id="dVN-x1-AUb"/>
+                                    <constraint firstItem="3nu-o1-iZ1" firstAttribute="leading" secondItem="leT-IX-zeG" secondAttribute="leading" constant="24" id="gCw-4n-m7R"/>
                                     <constraint firstItem="R7f-et-C8m" firstAttribute="leading" secondItem="leT-IX-zeG" secondAttribute="leading" id="jzv-7Y-LSq"/>
-                                    <constraint firstItem="TjS-Ak-eTo" firstAttribute="top" secondItem="leT-IX-zeG" secondAttribute="top" constant="16" id="kDu-bp-aDN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -98,6 +118,7 @@
                     <connections>
                         <outlet property="collapsibleView" destination="p4G-KN-AOy" id="2oW-VO-d4f"/>
                         <outlet property="collectionView" destination="uUc-uA-Gi4" id="Aq7-RJ-eiJ"/>
+                        <outlet property="pushButton" destination="PhG-s0-p9h" id="6oF-zK-xi3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgV-rX-sBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

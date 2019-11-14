@@ -20,7 +20,8 @@ final class StructViewController: BaseViewController {
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pushButton: UIButton!
     @IBOutlet private weak var collapsibleView: UIView!
     
     // MARK: Properties
@@ -32,10 +33,8 @@ final class StructViewController: BaseViewController {
         }
     }
     private lazy var didAppearInit: Void = {
-        if isBeingPresented {
-            UIView.animate(withDuration: 0.3) {
-                self.collapsibleView.isHidden = false
-            }
+        UIView.animate(withDuration: 0.3) {
+            self.collapsibleView.isHidden = false
         }
     }()
     
@@ -62,6 +61,11 @@ final class StructViewController: BaseViewController {
         presenter.dismiss()
     }
     
+    @IBAction func onTapPushButton(_ sender: UIButton) {
+        presenter.pushSameVC()
+    }
+    
+    
 }
 
 extension StructViewController: StructView {
@@ -76,8 +80,12 @@ extension StructViewController: StructView {
 extension StructViewController {
     
     private func setup() {
+        // - Navigation
+        navigationItem.title = "StructAPIProvider"
         // - View
         collapsibleView.isHidden = true
+        // - Button
+        pushButton.isHidden = navigationController == nil
         // - CollectionView
         collectionView.delegate = self
         collectionView.dataSource = self

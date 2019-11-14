@@ -15,6 +15,7 @@ protocol StructPresenter: AnyObject {
     // - API
     func get()
     // - Wireframe
+    func pushSameVC()
     func dismiss()
 }
 
@@ -53,6 +54,12 @@ class StructPresenterImpl: StructPresenter {
                 print(error)
             })
             .disposed(by: disposeBag)
+    }
+    
+    // MARK: Wireframe
+    
+    func pushSameVC() {
+        wireframe.pushSameVC()
     }
     
     func dismiss() {

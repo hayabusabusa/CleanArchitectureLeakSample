@@ -21,9 +21,13 @@ struct APIRepositoryImpl: APIRepository {
     
     // MARK: Dependency
     
-    // POINT: ② Singletonではdeinitされなかったので、structのAPIProviderに変えてみる
-    // → 結果は変わらず
-    private let apiProvider: StructAPIProvider = StructAPIProvider() // SingletoneAPIProvider = SingletoneAPIProvider.shared
+    private let apiProvider: APIProvider
+    
+    // MARK: Initializer
+    
+    init(apiProvider: APIProvider) {
+        self.apiProvider = apiProvider
+    }
     
     // MARK: API
     

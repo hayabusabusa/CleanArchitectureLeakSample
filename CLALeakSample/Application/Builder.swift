@@ -27,7 +27,7 @@ struct BuilderImpl: Builder {
                     view: vc,
                     wireframe: WireframeImpl(vc),
                     useCase: APIUseCaseImpl(
-                        repository: APIRepositoryImpl()
+                        repository: APIRepositoryImpl(apiProvider: StructAPIProvider())
                     )
                 )
             )

@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-final class SingletoneAPIProvider {
+final class SingletoneAPIProvider: APIProvider {
     
     // MARK: Singleton
     
