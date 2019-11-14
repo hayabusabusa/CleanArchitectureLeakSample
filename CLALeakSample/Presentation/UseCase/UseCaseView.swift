@@ -68,7 +68,8 @@ extension UseCaseViewController {
     }
     
     private func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout { (section, _) -> NSCollectionLayoutSection? in
+        let layout = UICollectionViewCompositionalLayout { [weak self] (section, _) -> NSCollectionLayoutSection? in
+            guard let self = self else { return nil }
             return self.dataSource[section].layout
         }
         return layout
