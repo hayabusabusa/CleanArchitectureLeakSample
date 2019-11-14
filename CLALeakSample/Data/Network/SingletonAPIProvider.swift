@@ -53,5 +53,6 @@ final class SingletoneAPIProvider: APIProvider {
                 print("\(type(of: self)).get().Observable was disposed.")
             }
         }
+        .debug()
     }
 }

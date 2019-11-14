@@ -31,6 +31,9 @@ extension ViewController {
             case 1:
                 let vc = BuilderImpl().build(.useCaseType)
                 present(vc, animated: true, completion: nil)
+            case 2:
+                let vc = BuilderImpl().build(.directlyType)
+                present(vc, animated: true, completion: nil)
             default:
                 break
             }
@@ -41,6 +44,9 @@ extension ViewController {
                 navigationController?.pushViewController(vc, animated: true)
             case 1:
                 let vc = BuilderImpl().build(.useCaseType)
+                navigationController?.pushViewController(vc, animated: true)
+            case 2:
+                let vc = BuilderImpl().build(.directlyType)
                 navigationController?.pushViewController(vc, animated: true)
             default:
                 break

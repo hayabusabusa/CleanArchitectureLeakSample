@@ -43,6 +43,9 @@
 		A4851AC1237D0F4A0004824D /* UseCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AC0237D0F4A0004824D /* UseCaseView.swift */; };
 		A4851AC5237D10250004824D /* UseCaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4851AC4237D10250004824D /* UseCaseViewController.storyboard */; };
 		A4851AC9237D10650004824D /* UseCaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AC8237D10650004824D /* UseCaseSection.swift */; };
+		A4851ACC237D161A0004824D /* DirectlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851ACB237D161A0004824D /* DirectlyView.swift */; };
+		A4851ACE237D16960004824D /* DirectlyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4851ACD237D16960004824D /* DirectlyViewController.storyboard */; };
+		A4851AD1237D17250004824D /* DirectlySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AD0237D17250004824D /* DirectlySection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +100,9 @@
 		A4851AC0237D0F4A0004824D /* UseCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseView.swift; sourceTree = "<group>"; };
 		A4851AC4237D10250004824D /* UseCaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UseCaseViewController.storyboard; sourceTree = "<group>"; };
 		A4851AC8237D10650004824D /* UseCaseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseSection.swift; sourceTree = "<group>"; };
+		A4851ACB237D161A0004824D /* DirectlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectlyView.swift; sourceTree = "<group>"; };
+		A4851ACD237D16960004824D /* DirectlyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectlyViewController.storyboard; sourceTree = "<group>"; };
+		A4851AD0237D17250004824D /* DirectlySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectlySection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,10 +166,11 @@
 		A4322A7B237CE60600F1BEA1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A4322A9E237CED9100F1BEA1 /* Base */,
 				A4322A7F237CE64400F1BEA1 /* Main */,
 				A4851AAD237CEEA20004824D /* Struct */,
 				A4851ABF237D0F390004824D /* UseCase */,
+				A4851ACA237D15B00004824D /* Directly */,
+				A4851AD2237D2B320004824D /* Dispose */,
 				A4851AC6237D10400004824D /* Common */,
 			);
 			path = Presentation;
@@ -325,6 +332,7 @@
 		A4851AC6237D10400004824D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4322A9E237CED9100F1BEA1 /* Base */,
 				A4851AB4237CF54D0004824D /* Cell */,
 			);
 			path = Common;
@@ -336,6 +344,31 @@
 				A4851AC8237D10650004824D /* UseCaseSection.swift */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		A4851ACA237D15B00004824D /* Directly */ = {
+			isa = PBXGroup;
+			children = (
+				A4851ACB237D161A0004824D /* DirectlyView.swift */,
+				A4851ACD237D16960004824D /* DirectlyViewController.storyboard */,
+				A4851ACF237D17160004824D /* Section */,
+			);
+			path = Directly;
+			sourceTree = "<group>";
+		};
+		A4851ACF237D17160004824D /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				A4851AD0237D17250004824D /* DirectlySection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		A4851AD2237D2B320004824D /* Dispose */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dispose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +436,7 @@
 				A4322A65237CE42E00F1BEA1 /* Assets.xcassets in Resources */,
 				A4851AB9237CF5A10004824D /* PostCell.xib in Resources */,
 				A4851AB3237CF11A0004824D /* StructViewController.storyboard in Resources */,
+				A4851ACE237D16960004824D /* DirectlyViewController.storyboard in Resources */,
 				A4322A63237CE42B00F1BEA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,8 +487,10 @@
 				A4851AB1237CEF740004824D /* StructPresenter.swift in Sources */,
 				A4322A5C237CE42B00F1BEA1 /* AppDelegate.swift in Sources */,
 				A4322A9D237CED5D00F1BEA1 /* Builder.swift in Sources */,
+				A4851ACC237D161A0004824D /* DirectlyView.swift in Sources */,
 				A4322A5E237CE42B00F1BEA1 /* SceneDelegate.swift in Sources */,
 				A4322A85237CE89D00F1BEA1 /* PostEntity.swift in Sources */,
+				A4851AD1237D17250004824D /* DirectlySection.swift in Sources */,
 				A4322AA2237CEDBD00F1BEA1 /* BaseViewController.swift in Sources */,
 				A4322A87237CEA1E00F1BEA1 /* SingletonAPIProvider.swift in Sources */,
 				A4851AC1237D0F4A0004824D /* UseCaseView.swift in Sources */,

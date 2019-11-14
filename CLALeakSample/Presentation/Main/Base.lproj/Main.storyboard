@@ -60,12 +60,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="45w-cg-VH9">
+                                        <rect key="frame" x="20" y="142.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="45w-cg-VH9" id="4Fz-ax-tLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APIProvider直持ち" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="068-pG-zja">
+                                                    <rect key="frame" x="16" y="8" width="342" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="068-pG-zja" firstAttribute="top" secondItem="4Fz-ax-tLP" secondAttribute="top" constant="8" id="7Xr-XV-Hbe"/>
+                                                <constraint firstAttribute="trailing" secondItem="068-pG-zja" secondAttribute="trailing" constant="16" id="8KF-ua-6y8"/>
+                                                <constraint firstAttribute="bottom" secondItem="068-pG-zja" secondAttribute="bottom" constant="8" id="TSh-0B-J3t"/>
+                                                <constraint firstItem="068-pG-zja" firstAttribute="leading" secondItem="4Fz-ax-tLP" secondAttribute="leading" constant="16" id="WgW-Bj-AXX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Push" id="CTe-rZ-mSH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="0oN-U0-86v">
-                                        <rect key="frame" x="20" y="198.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="242" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0oN-U0-86v" id="vih-5X-hQz">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -87,7 +109,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="16V-E0-o1B">
-                                        <rect key="frame" x="20" y="242" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="285.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="16V-E0-o1B" id="ENP-RJ-yIz">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -105,6 +127,28 @@
                                                 <constraint firstItem="MQ3-pN-7UA" firstAttribute="leading" secondItem="ENP-RJ-yIz" secondAttribute="leading" constant="16" id="EEW-ss-FD0"/>
                                                 <constraint firstItem="MQ3-pN-7UA" firstAttribute="top" secondItem="ENP-RJ-yIz" secondAttribute="top" constant="8" id="XWB-OT-BSQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="MQ3-pN-7UA" secondAttribute="trailing" constant="16" id="qZk-km-jO7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="gUP-Du-q1M">
+                                        <rect key="frame" x="20" y="329" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUP-Du-q1M" id="FEQ-LP-czS">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APIProvider直持ち" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcu-R2-qVg">
+                                                    <rect key="frame" x="16" y="8" width="342" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Hcu-R2-qVg" secondAttribute="bottom" constant="8" id="B5o-KA-rka"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hcu-R2-qVg" secondAttribute="trailing" constant="16" id="dHP-4F-tSM"/>
+                                                <constraint firstItem="Hcu-R2-qVg" firstAttribute="leading" secondItem="FEQ-LP-czS" secondAttribute="leading" constant="16" id="gBh-iA-Wjk"/>
+                                                <constraint firstItem="Hcu-R2-qVg" firstAttribute="top" secondItem="FEQ-LP-czS" secondAttribute="top" constant="8" id="rS0-WB-LqC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

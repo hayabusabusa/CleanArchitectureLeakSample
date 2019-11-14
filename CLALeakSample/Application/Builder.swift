@@ -40,6 +40,10 @@ struct BuilderImpl: Builder {
                 )
             )
             return vc
+        case .directlyType:
+            let vc = DirectlyViewController.newInstance()
+            vc.apiProvider = SingletoneAPIProvider.shared
+            return vc
         }
     }
 }
@@ -49,4 +53,5 @@ struct BuilderImpl: Builder {
 enum BuildType {
     case structType
     case useCaseType
+    case directlyType
 }
