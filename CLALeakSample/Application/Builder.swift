@@ -32,6 +32,14 @@ struct BuilderImpl: Builder {
                 )
             )
             return vc
+        case .useCaseType:
+            let vc = UseCaseViewController.newInstance()
+            vc.inject(
+                useCase: APIUseCaseImpl(
+                    repository: APIRepositoryImpl(apiProvider: SingletoneAPIProvider.shared) // 同じようにひとまずSingleton
+                )
+            )
+            return vc
         }
     }
 }
@@ -40,4 +48,5 @@ struct BuilderImpl: Builder {
 
 enum BuildType {
     case structType
+    case useCaseType
 }

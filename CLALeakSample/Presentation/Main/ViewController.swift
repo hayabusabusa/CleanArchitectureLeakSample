@@ -28,14 +28,20 @@ extension ViewController {
             case 0:
                 let vc = BuilderImpl().build(.structType)
                 present(vc, animated: true, completion: nil)
+            case 1:
+                let vc = BuilderImpl().build(.useCaseType)
+                present(vc, animated: true, completion: nil)
             default:
                 break
             }
         case 1:
             switch indexPath.row {
             case 0:
-                let vc = BaseNavigationController(rootViewController: BuilderImpl().build(.structType))
-                present(vc, animated: true, completion: nil)
+                let vc = BuilderImpl().build(.structType)
+                navigationController?.pushViewController(vc, animated: true)
+            case 1:
+                let vc = BuilderImpl().build(.useCaseType)
+                navigationController?.pushViewController(vc, animated: true)
             default:
                 break
             }

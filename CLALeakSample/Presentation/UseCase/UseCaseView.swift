@@ -1,5 +1,5 @@
 //
-//  StructView.swift
+//  UseCaseView.swift
 //  CLALeakSample
 //
 //  Created by Yamada Shunya on 2019/11/14.
@@ -7,89 +7,55 @@
 //
 
 import UIKit
+import RxSwift
 
 // MARK: - Interface
 
-protocol StructView: AnyObject {
-    func updateDataSource(_ dataSource: [StructSection])
+protocol UseCaseView: AnyObject {
+    
 }
 
 // MARK: - Implementation
 
-/// StructのAPIProviderを持つViewController
+/// UseCaseを直接持つViewController
 ///
 /// - Note: Dependency
-///   - Presenter-UseCase-Repository-APIProvider
-final class StructViewController: BaseViewController {
+///   - UseCase-Repository-APIProvider
+final class UseCaseViewController: BaseViewController {
     
     // MARK: IBOutlet
     
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var pushButton: UIButton!
-    @IBOutlet private weak var collapsibleView: UIView!
     
     // MARK: Properties
     
-    private var presenter: StructPresenter!
-    private var dataSource: [StructSection] = [StructSection]() {
-        didSet {
-            collectionView.reloadData()
-        }
-    }
-    private lazy var didAppearInit: Void = {
-        UIView.animate(withDuration: 0.3) {
-            self.collapsibleView.isHidden = false
-        }
-    }()
+    private var useCase: APIUseCase!
+    private var dataSource: [UseCaseSection] = [UseCaseSection]()
     
     // MARK: Lifecycle
     
-    func inject(presenter: StructPresenter) {
-        self.presenter = presenter
+    func inject(useCase: APIUseCase) {
+        self.useCase = useCase
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        presenter.get()
+        get()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        _ = didAppearInit
-    }
-    
-    // MARK: IBAction
-    
-    @IBAction func onTapCloseButton(_ sender: UIButton) {
-        presenter.dismiss()
-    }
-    
-    @IBAction func onTapPushButton(_ sender: UIButton) {
-        presenter.pushSameVC()
-    }
-    
-    
 }
 
-extension StructViewController: StructView {
+extension UseCaseViewController: UseCaseView {
     
-    func updateDataSource(_ dataSource: [StructSection]) {
-        self.dataSource = dataSource
-    }
 }
 
 // MARK: - Setup
 
-extension StructViewController {
+extension UseCaseViewController {
     
     private func setup() {
         // - Navigation
         navigationItem.title = "StructAPIProvider"
-        // - View
-        collapsibleView.isHidden = true
-        // - Button
-        pushButton.isHidden = navigationController == nil
         // - CollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -105,9 +71,29 @@ extension StructViewController {
     }
 }
 
+// MARK: - UseCase
+
+extension UseCaseViewController {
+    
+    func get() {
+        useCase.get()
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] viewModels in
+                guard let self = self else { return }
+                self.dataSource = [UseCaseSection.content(viewModels: viewModels)]
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+    }
+}
+
 // MARK: - CollectionView dataSource, delegate
 
-extension StructViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension UseCaseViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataSource.count

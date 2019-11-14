@@ -40,6 +40,9 @@
 		A4851AB9237CF5A10004824D /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4851AB7237CF5A10004824D /* PostCell.xib */; };
 		A4851ABB237CF7E60004824D /* StructSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851ABA237CF7E60004824D /* StructSection.swift */; };
 		A4851ABD237D07AD0004824D /* APIProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851ABC237D07AD0004824D /* APIProviderProtocol.swift */; };
+		A4851AC1237D0F4A0004824D /* UseCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AC0237D0F4A0004824D /* UseCaseView.swift */; };
+		A4851AC5237D10250004824D /* UseCaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4851AC4237D10250004824D /* UseCaseViewController.storyboard */; };
+		A4851AC9237D10650004824D /* UseCaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851AC8237D10650004824D /* UseCaseSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,6 +94,9 @@
 		A4851AB7237CF5A10004824D /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		A4851ABA237CF7E60004824D /* StructSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructSection.swift; sourceTree = "<group>"; };
 		A4851ABC237D07AD0004824D /* APIProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProviderProtocol.swift; sourceTree = "<group>"; };
+		A4851AC0237D0F4A0004824D /* UseCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseView.swift; sourceTree = "<group>"; };
+		A4851AC4237D10250004824D /* UseCaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UseCaseViewController.storyboard; sourceTree = "<group>"; };
+		A4851AC8237D10650004824D /* UseCaseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,8 @@
 				A4322A9E237CED9100F1BEA1 /* Base */,
 				A4322A7F237CE64400F1BEA1 /* Main */,
 				A4851AAD237CEEA20004824D /* Struct */,
+				A4851ABF237D0F390004824D /* UseCase */,
+				A4851AC6237D10400004824D /* Common */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -283,7 +291,6 @@
 				A4851AAE237CEF4E0004824D /* StructView.swift */,
 				A4851AB2237CF11A0004824D /* StructViewController.storyboard */,
 				A4851AB5237CF57B0004824D /* Section */,
-				A4851AB4237CF54D0004824D /* Cell */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -301,6 +308,32 @@
 			isa = PBXGroup;
 			children = (
 				A4851ABA237CF7E60004824D /* StructSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		A4851ABF237D0F390004824D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A4851AC0237D0F4A0004824D /* UseCaseView.swift */,
+				A4851AC4237D10250004824D /* UseCaseViewController.storyboard */,
+				A4851AC7237D10570004824D /* Section */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A4851AC6237D10400004824D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A4851AB4237CF54D0004824D /* Cell */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A4851AC7237D10570004824D /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				A4851AC8237D10650004824D /* UseCaseSection.swift */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -365,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4851AC5237D10250004824D /* UseCaseViewController.storyboard in Resources */,
 				A4322A68237CE42E00F1BEA1 /* LaunchScreen.storyboard in Resources */,
 				A4322A65237CE42E00F1BEA1 /* Assets.xcassets in Resources */,
 				A4851AB9237CF5A10004824D /* PostCell.xib in Resources */,
@@ -409,6 +443,7 @@
 				A4322A8D237CEB0500F1BEA1 /* APIRepository.swift in Sources */,
 				A4322A99237CECA900F1BEA1 /* APIUseCase.swift in Sources */,
 				A4322A82237CE7F100F1BEA1 /* StructAPIProvider.swift in Sources */,
+				A4851AC9237D10650004824D /* UseCaseSection.swift in Sources */,
 				A4851ABB237CF7E60004824D /* StructSection.swift in Sources */,
 				A4322A91237CEBCB00F1BEA1 /* AssociatedTranslator.swift in Sources */,
 				A4322A60237CE42B00F1BEA1 /* ViewController.swift in Sources */,
@@ -422,6 +457,7 @@
 				A4322A85237CE89D00F1BEA1 /* PostEntity.swift in Sources */,
 				A4322AA2237CEDBD00F1BEA1 /* BaseViewController.swift in Sources */,
 				A4322A87237CEA1E00F1BEA1 /* SingletonAPIProvider.swift in Sources */,
+				A4851AC1237D0F4A0004824D /* UseCaseView.swift in Sources */,
 				A4322A95237CEBFC00F1BEA1 /* Post.swift in Sources */,
 				A4851ABD237D07AD0004824D /* APIProviderProtocol.swift in Sources */,
 				A4322AA6237CEE7F00F1BEA1 /* Storyboardable.swift in Sources */,
